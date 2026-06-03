@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método Reset | O Fim do Efeito Sanfona</title>
+    <meta name="description" content="Transforme seus hábitos antes de tentar transformar seu corpo. O sistema definitivo para manter o peso no automático.">
+    
+    <!-- Pré-conexão de fontes para performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800;900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Meta Pixel Code (Placeholder) -->
+    <!--
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'SEU_PIXEL_ID');
+    fbq('track', 'PageView');
+    </script>
+    -->
+
+    <style>
+        /* === VARIÁVEIS DE COR E ESTILO PREMIUM === */
+        :root {
+            --bg-black: #030303;
+            --bg-surface: #0a0a0a;
+            --bg-surface-light: #141414;
+            --gold-primary: #D4AF37;
+            --gold-light: #F3E5AB;
+            --green-cta: #00E676;
+            --green-cta-hover: #00C853;
+            --text-main: #F5F5F5;
+            --text-muted: #A3A3A3;
+            --border-subtle: rgba(212, 175, 55, 0.15);
+            
+            --font-display: 'Montserrat', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        /* === RESET E CONFIGURAÇÕES GERAIS === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            background-color: var(--bg-black);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* === TIPOGRAFIA === */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-display);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+
+        .text-gold { color: var(--gold-primary); }
+        .text-green { color: var(--green-cta); }
+        .text-center { text-align: center; }
+
+        /* === LAYOUT E CONTAINERS === */
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        /* === BOTÕES CTA DE ALTA CONVERSÃO === */
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 480px;
+            background: linear-gradient(180deg, #00FF87 0%, var(--green-cta) 100%);
+            color: #000;
+            font-family: var(--font-display);
+            font-weight: 900;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+            padding: 24px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 230, 118, 0.2);
+            animation: pulse-green 2.5s infinite;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 230, 118, 0.4);
+            background: linear-gradient(180deg, #1aff96 0%, var(--green-cta-hover) 100%);
+        }
+
+        .cta-btn span {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .cta-subtext {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 12px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        @keyframes pulse-green {
+            0% { box-shadow: 0 0 0 0 rgba(0, 230, 118, 0.4); }
+            70% { box-shadow: 0 0 0 20px rgba(0, 230, 118, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 230, 118, 0); }
+        }
+
+        /* === HERO SECTION (ACIMA DA DOBRA) === */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle at top center, #1a1a1a 0%, var(--bg-black) 70%);
+            padding-top: 60px;
+            padding-bottom: 60px;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .hero-pretitle {
+            color: var(--gold-primary);
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            display: inline-block;
+            border: 1px solid var(--gold-primary);
+            padding: 6px 16px;
+            border-radius: 50px;
+            background: rgba(212, 175, 55, 0.05);
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            letter-spacing: -2px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            text-shadow: 0 10px 30px rgba(0,0,0,0.8);
+        }
+
+        .hero p.subtitle {
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            color: var(--text-muted);
+            max-width: 800px;
+            margin: 0 auto 48px auto;
+            font-weight: 400;
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 32px;
+            flex-wrap: wrap;
+        }
+
+        .trust-badges div {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .trust-badges i { color: var(--gold-primary); }
+
+        /* === IDENTIFICAÇÃO (PAS) === */
+        .problem-section {
+            background-color: var(--bg-surface);
+        }
+
+        .box-destaque {
+            background: linear-gradient(145deg, var(--bg-surface-light), var(--bg-black));
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-left: 4px solid #ff3333;
+            padding: 40px;
+            border-radius: 12px;
+            margin-top: 48px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+
+        .box-destaque p {
+            font-size: 1.15rem;
+            margin-bottom: 20px;
+            color: #dcdcdc;
+        }
+
+        /* === CURIOSIDADE === */
+        .curiosity-section {
+            background: url('data:image/svg+xml;utf8,<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="1" fill="rgba(255,255,255,0.03)"/></svg>');
+            border-top: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .curiosity-text {
+            font-family: var(--font-display);
+            font-size: clamp(1.5rem, 3vw, 2.5rem);
+            font-weight: 800;
+            line-height: 1.3;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 40px;
+            color: var(--gold-light);
+        }
+
+        /* === MECANISMO ÚNICO & PILARES === */
+        .grid-pilares {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 64px;
+        }
+
+        .card-pilar {
+            background: var(--bg-surface-light);
+            padding: 40px 32px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-pilar::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 2px;
+            background: var(--gold-primary);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .card-pilar:hover {
+            transform: translateY(-8px);
+            border-color: var(--border-subtle);
+        }
+
+        .card-pilar:hover::before { transform: scaleX(1); }
+
+        .card-pilar i {
+            font-size: 2.5rem;
+            color: var(--gold-primary);
+            margin-bottom: 24px;
+            display: block;
+        }
+
+        /* === ENTREGÁVEIS (O QUE VOCÊ VAI RECEBER) === */
+        .deliverables-list {
+            margin-top: 48px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .deliverable-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            background: var(--bg-surface);
+            padding: 24px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .deliverable-item i {
+            color: var(--green-cta);
+            font-size: 1.5rem;
+            margin-top: 4px;
+        }
+
+        .deliverable-item h4 { margin-bottom: 8px; font-size: 1.2rem; }
+        .deliverable-item p { color: var(--text-muted); font-size: 0.95rem; }
+
+        /* === EMPILHAMENTO DE VALOR & OFERTA === */
+        .offer-section {
+            background: radial-gradient(circle at center, #111 0%, var(--bg-black) 100%);
+            border-top: 1px solid var(--border-subtle);
+        }
+
+        .value-stack {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--bg-surface-light);
+            border: 1px solid var(--gold-primary);
+            border-radius: 16px;
+            padding: 40px;
+            position: relative;
+            box-shadow: 0 20px 50px rgba(212, 175, 55, 0.05);
+        }
+
+        .stack-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 16px 0;
+            border-bottom: 1px dashed rgba(255,255,255,0.1);
+            font-size: 1.05rem;
+        }
+
+        .stack-item.total {
+            border-bottom: none;
+            margin-top: 24px;
+            color: var(--text-muted);
+            text-decoration: line-through;
+            font-size: 1.2rem;
+        }
+
+        .price-reveal {
+            text-align: center;
+            margin: 32px 0;
+        }
+
+        .price-reveal span {
+            display: block;
+            color: var(--text-main);
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .price-reveal .price {
+            font-family: var(--font-display);
+            font-size: 4.5rem;
+            font-weight: 900;
+            color: var(--green-cta);
+            line-height: 1;
+            text-shadow: 0 0 20px rgba(0, 230, 118, 0.3);
+        }
+
+        /* === PROVA SOCIAL === */
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 48px;
+        }
+
+        .testimonial-card {
+            background: var(--bg-surface);
+            padding: 32px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .stars { color: var(--gold-primary); margin-bottom: 16px; letter-spacing: 2px; }
+
+        /* === GARANTIA === */
+        .guarantee-box {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            background: var(--bg-surface-light);
+            border: 1px solid var(--border-subtle);
+            border-radius: 16px;
+            padding: 48px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .guarantee-icon {
+            font-size: 5rem;
+            color: var(--gold-primary);
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 768px) {
+            .guarantee-box {
+                flex-direction: column;
+                text-align: center;
+                padding: 32px 24px;
+                gap: 24px;
+            }
+        }
+
+        /* === FAQ === */
+        .faq-item {
+            background: var(--bg-surface);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 8px;
+            margin-bottom: 16px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question {
+            padding: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-family: var(--font-display);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .faq-answer {
+            padding: 0 24px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            color: var(--text-muted);
+        }
+
+        .faq-item.active { border-color: var(--gold-primary); }
+        .faq-item.active .faq-answer { padding: 0 24px 24px; max-height: 500px; }
+        .faq-item.active .faq-question i { transform: rotate(180deg); color: var(--gold-primary); }
+
+        /* === FOOTER === */
+        footer {
+            background: #000;
+            padding: 40px 0;
+            text-align: center;
+            color: #666;
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        /* === ANIMAÇÕES DE SCROLL === */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO SECTION -->
+    <section class="hero text-center">
+        <div class="container reveal active">
+            <div class="hero-pretitle">O fim definitivo do efeito sanfona</div>
+            <h1><span class="text-gold">Método</span> Reset</h1>
+            <p class="subtitle">Transforme seus hábitos antes de tentar transformar seu corpo. Descubra o exato sistema para construir resultados sustentáveis sem depender de dietas extremas ou restrições absurdas.</p>
+            
+            <a href="#oferta" class="cta-btn" onclick="fbq('track', 'InitiateCheckout');">
+                <span>QUERO ACESSAR O MÉTODO RESET <i class="fa-solid fa-arrow-right"></i></span>
+            </a>
+            <span class="cta-subtext"><i class="fa-solid fa-lock"></i> Pagamento 100% Seguro e Acesso Imediato</span>
+
+            <div class="trust-badges">
+                <div><i class="fa-solid fa-shield-check"></i> Risco Zero</div>
+                <div><i class="fa-solid fa-star"></i> Satisfação Comprovada</div>
+                <div><i class="fa-solid fa-bolt"></i> Acesso Liberado na Hora</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IDENTIFICAÇÃO DO PROBLEMA (PAS) -->
+    <section class="problem-section" id="identificacao">
+        <div class="container reveal">
+            <h2 class="text-center">Você já tentou de tudo, <span class="text-gold">mas a balança sempre vence?</span></h2>
+            <p class="text-center text-muted" style="max-width: 700px; margin: 0 auto;">Anos pulando de dieta em dieta, baixando aplicativos de calorias e comprando desafios de 21 dias...</p>
+            
+            <div class="box-destaque">
+                <p><strong>Deixe-me ser muito direto com você:</strong> A culpa não é da sua falta de disciplina.</p>
+                <p>A indústria do emagrecimento foi desenhada para fazer você falhar. Eles vendem restrições extremas que o seu cérebro primitivo não suporta manter por mais de 3 semanas. Quando você desiste e ganha todo o peso de volta (o famoso efeito sanfona), o problema não é você. <strong>O problema é a ausência de um sistema.</strong></p>
+                <p>Tentar transformar o corpo sem antes reconfigurar a mente e a sua rotina é como tentar acelerar um carro com o freio de mão puxado. Você gasta energia, queima o motor, e não sai do lugar.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CURIOSIDADE -->
+    <section class="curiosity-section">
+        <div class="container reveal">
+            <div class="curiosity-text">"Descubra os hábitos que diferenciam pessoas que mantêm um corpo equilibrado sem viver de dieta."</div>
+            <p class="text-center text-muted" style="font-size: 1.2rem; max-width: 800px; margin: 0 auto;">Por que algumas pessoas conseguem manter um corpo leve, energia alta e saúde blindada sem viver contando calorias ou pesando marmitas? A resposta está no <strong>mecanismo invisível</strong> das escolhas diárias.</p>
+        </div>
+    </section>
+
+    <!-- MECANISMO ÚNICO & PILARES -->
+    <section id="metodo">
+        <div class="container reveal">
+            <h2 class="text-center" style="font-size: 2.5rem;">O <span class="text-gold">Método Reset</span></h2>
+            <p class="text-center text-muted" style="max-width: 700px; margin: 0 auto;">Uma engenharia reversa comportamental. Não é sobre o que você não pode comer. É sobre reorganizar sua rotina, simplificar o planejamento e tomar decisões inteligentes no piloto automático.</p>
+
+            <div class="grid-pilares">
+                <div class="card-pilar">
+                    <i class="fa-solid fa-list-check"></i>
+                    <h3>Organização Alimentar</h3>
+                    <p class="text-muted">Como estruturar seu ambiente para que a escolha certa seja a mais fácil e a errada seja quase impossível.</p>
+                </div>
+                <div class="card-pilar">
+                    <i class="fa-solid fa-brain"></i>
+                    <h3>Construção de Hábitos</h3>
+                    <p class="text-muted">A ciência comportamental aplicada à sua rotina para transformar ações forçadas em rituais automáticos.</p>
+                </div>
+                <div class="card-pilar">
+                    <i class="fa-solid fa-clock"></i>
+                    <h3>Rotina Prática</h3>
+                    <p class="text-muted">Estratégias para quem não tem tempo a perder. Soluções rápidas e inteligentes para dias caóticos.</p>
+                </div>
+                <div class="card-pilar">
+                    <i class="fa-solid fa-apple-whole"></i>
+                    <h3>Escolhas Conscientes</h3>
+                    <p class="text-muted">O fim do "tudo ou nada". Aprenda a comer o que gosta com estratégia, sem culpa e sem sabotar resultados.</p>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 64px;">
+                <a href="#oferta" class="cta-btn">
+                    <span>QUERO REPROGRAMAR MINHA ROTINA <i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- O QUE VOCÊ VAI RECEBER -->
+    <section class="problem-section" id="entregaveis">
+        <div class="container reveal">
+            <h2 class="text-center">O Arsenal Completo que <span class="text-gold">Você Leva Hoje</span></h2>
+            
+            <div class="deliverables-list">
+                <div class="deliverable-item">
+                    <i class="fa-solid fa-book-bookmark"></i>
+                    <div>
+                        <h4>1. O Guia Definitivo Método Reset</h4>
+                        <p>O manual completo com toda a teoria e prática para você hackear sua mente e blindar seus hábitos contra a autossabotagem.</p>
+                    </div>
+                </div>
+                <div class="deliverable-item">
+                    <i class="fa-solid fa-map"></i>
+                    <div>
+                        <h4>2. Plano de Implementação Rápida</h4>
+                        <p>Um mapa exato, passo a passo, dizendo exatamente o que fazer no dia 1, dia 2 e assim por diante. Sem margem para erros.</p>
+                    </div>
+                </div>
+                <div class="deliverable-item">
+                    <i class="fa-solid fa-check-double"></i>
+                    <div>
+                        <h4>3. Checklist Diário de Consistência</h4>
+                        <p>A ferramenta visual para rastrear seu progresso diário. A ciência prova que marcar o "feito" libera dopamina e garante continuidade.</p>
+                    </div>
+                </div>
+                <div class="deliverable-item" style="border-color: var(--gold-primary); background: rgba(212, 175, 55, 0.05);">
+                    <i class="fa-solid fa-gift text-gold"></i>
+                    <div>
+                        <h4 class="text-gold">BÔNUS VIP: Exercícios de Reprogramação e Materiais de Apoio</h4>
+                        <p>Estratégias avançadas para lidar com ansiedade, fome emocional e convívio social sem sair do plano.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROVA SOCIAL -->
+    <section id="prova-social">
+        <div class="container reveal">
+            <h2 class="text-center">Pessoas Fora da Curva</h2>
+            <p class="text-center text-muted">Resultados reais de quem decidiu sair da matrix das dietas falhas.</p>
+
+            <div class="testimonials">
+                <div class="testimonial-card">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p>"Eu já tinha gastado rios de dinheiro com nutricionistas e não seguia nada por mais de um mês. O Método Reset me ensinou que o segredo estava em organizar minha mente e minha despensa. Vida transformada."</p>
+                    <h4 style="margin-top: 16px; font-size: 1rem;" class="text-gold">- Ricardo S.</h4>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p>"Trabalho 10 horas por dia e achava impossível ter uma rotina saudável. Os checklists e o plano prático salvaram minha saúde. São pequenas mudanças que geram um impacto brutal."</p>
+                    <h4 style="margin-top: 16px; font-size: 1rem;" class="text-gold">- Amanda M.</h4>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <p>"Pela primeira vez estou há 6 meses mantendo meu peso, sem ansiedade, comendo pizza no fim de semana sem culpa. Entender os hábitos mudou o jogo para mim."</p>
+                    <h4 style="margin-top: 16px; font-size: 1rem;" class="text-gold">- Fernando T.</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EMPILHAMENTO DE VALOR & OFERTA -->
+    <section class="offer-section" id="oferta">
+        <div class="container reveal">
+            <h2 class="text-center" style="margin-bottom: 40px;">Qual é o valor para resolver <br><span class="text-gold">isso de uma vez por todas?</span></h2>
+
+            <div class="value-stack">
+                <div class="stack-item">
+                    <span>Guia Definitivo Método Reset</span>
+                    <span>R$ 147,00</span>
+                </div>
+                <div class="stack-item">
+                    <span>Plano de Implementação Prática</span>
+                    <span>R$ 97,00</span>
+                </div>
+                <div class="stack-item">
+                    <span>Checklist Diário de Consistência</span>
+                    <span>R$ 47,00</span>
+                </div>
+                <div class="stack-item">
+                    <span class="text-gold">Bônus: Exercícios de Reprogramação</span>
+                    <span class="text-gold">R$ 97,00</span>
+                </div>
+                <div class="stack-item total">
+                    <span>Valor Total dos Materiais:</span>
+                    <span>R$ 388,00</span>
+                </div>
+
+                <div class="price-reveal">
+                    <span>Mas hoje, você não pagará R$ 388,00.</span>
+                    <span>Acesso vitalício por apenas:</span>
+                    <div class="price">R$ 27<span style="font-size: 2rem;">,90</span></div>
+                    <span style="color: var(--text-muted); font-size: 0.9rem; margin-top: 8px;">Pagamento único. Sem mensalidades.</span>
+                </div>
+
+                <div class="text-center">
+                    <a href="#" class="cta-btn" style="width: 100%;" onclick="fbq('track', 'AddToCart');">
+                        <span>COMPRAR AGORA E LIBERAR ACESSO <i class="fa-solid fa-unlock"></i></span>
+                    </a>
+                    <p style="margin-top: 16px; font-size: 0.85rem; color: #ff3333;"><i class="fa-solid fa-clock"></i> Atenção: Esta oferta pode ser encerrada a qualquer momento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GARANTIA -->
+    <section id="garantia" style="padding-top: 0;">
+        <div class="container reveal">
+            <div class="guarantee-box">
+                <i class="fa-solid fa-shield-halved guarantee-icon"></i>
+                <div>
+                    <h3 class="text-gold" style="font-size: 1.8rem;">O Risco é 100% Meu</h3>
+                    <p style="color: var(--text-muted); font-size: 1.05rem;">Você tem <strong>7 dias completos</strong> para devorar o Método Reset. Acesse o material, aplique o plano de implementação e use os checklists. Se em 7 dias você achar que este não é o melhor sistema de hábitos que você já viu, ou se simplesmente não gostar da cor do material, basta enviar um único e-mail e devolverei cada centavo do seu dinheiro. Sem perguntas. Sem burocracia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="problem-section">
+        <div class="container reveal">
+            <h2 class="text-center text-gold" style="margin-bottom: 48px;">Perguntas Frequentes</h2>
+            
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Não tenho tempo. Minha rotina é corrida. Vai funcionar?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim. O Método Reset foi criado exatamente para quem não tem tempo a perder. As estratégias de organização e o plano de implementação exigem minutos do seu dia, não horas. É sobre trabalhar de forma inteligente, não mais difícil.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Já tentei de tudo e falhei. Por que agora seria diferente?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Porque você sempre tentou mudar o telhado sem construir a fundação. As dietas forçam ações extremas. O Método foca em criar um sistema invisível onde a constância se torna o seu padrão natural. Você não precisará usar força de vontade o tempo todo.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Isso funciona para iniciantes?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutamente. A linguagem é direta, simples e o passo a passo pega você pela mão desde o dia zero. Não assumimos que você sabe nada; ensinamos o mecanismo do zero.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Preciso seguir uma dieta rígida?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Não. Nós não ditamos cardápios fechados. Nós te entregamos o manual operacional de como encaixar os alimentos que você gosta, nas quantidades certas, reprogramando sua relação com a comida.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Como eu acesso o material?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Assim que o pagamento for aprovado (o que leva segundos no PIX ou Cartão), você receberá um e-mail com seus dados de login exclusivos para acessar a área de membros e baixar todo o arsenal.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center" style="margin-top: 48px;">
+                <a href="#oferta" class="cta-btn">
+                    <span>GARANTIR MINHA VAGA AGORA <i class="fa-solid fa-check"></i></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p style="margin-bottom: 16px;"><i class="fa-solid fa-lock"></i> Ambiente 100% Seguro. Seus dados estão protegidos.</p>
+            <p>Os resultados podem variar de pessoa para pessoa. Este produto não substitui o acompanhamento de um profissional da saúde, como médicos ou nutricionistas.</p>
+            <p style="margin-top: 24px;">&copy; 2026 Método Reset. Todos os direitos reservados. Design e Estratégia de Alta Performance.</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script>
+        // FAQ Accordion Logic
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                // Close all
+                faqItems.forEach(el => el.classList.remove('active'));
+                
+                // Open clicked if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Scroll Reveal Logic (Intersection Observer)
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        const revealCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target); // Trigger only once
+                }
+            });
+        };
+
+        const revealOptions = {
+            threshold: 0.15,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const revealObserver = new IntersectionObserver(revealCallback, revealOptions);
+        
+        revealElements.forEach(el => revealObserver.observe(el));
+    </script>
+</body>
+</html>
